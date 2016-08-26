@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Movie</string>
+    <string name="action_settings">Search</string>
+    <string name="slug">slug</string>
+    <string name="imdb">imdb</string>
+    <string name="score">score</string>
+    <string name="arrow">⟼</string>
+    <string name="error_loading_movies">Some problem occurred\nin fetching movies\ntap to retry!</string>
+    <string name="error_searching_movies">Couldn\'t perform search\n or\n find expected result from search</string>
+    <string name="search_movies">Search movies</string>
+</resources>

@@ -1,0 +1,50 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        applicationId "com.wordpress.laaptu.mvp.movie"
+        minSdkVersion 16
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+        buildConfigField "String", "TRAKT_API_KEY", "\"9adc26c8074943806b1d11e0753bb7f8f89a98fa2ece2df72f10e6546811529e\""
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+configurations.all {
+    resolutionStrategy {
+        force rootProject.ext.projectDependencies.supportAnnotations
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    def dependency = rootProject.ext.projectDependencies
+
+    compile dependency.appcompat
+    compile dependency.supportDesign
+    compile dependency.androidSupportCardView
+    compile dependency.butterKnife
+    apt dependency.butterKnifeCompiler
+    compile dependency.retrofit
+    compile dependency.retrofitGsonConverter
+    compile dependency.okhttpLoggingInterceptor
+    compile dependency.timber
+
+
+    testCompile dependency.junit
+
+    androidTestCompile dependency.androidTestRunner
+    androidTestCompile dependency.androidTestRules
+}

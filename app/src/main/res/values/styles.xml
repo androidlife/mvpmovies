@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="MovieItem" parent="CardView">
+        <item name="android:layout_margin">@dimen/card_item_layout_margin</item>
+        <item name="android:clickable">true</item>
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+        <item name="cardElevation">@dimen/card_item_elevation</item>
+        <item name="cardCornerRadius">@dimen/card_item_corner_radius</item>
+    </style>
+
+    <style name="AppTheme.TextView" parent="@android:style/Widget.TextView" />
+
+    <style name="AppTheme.TextView.Title">
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">21sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="AppTheme.TextView.Year">
+        <item name="android:textColor">#9fa7ae</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="AppTheme.TextView.Title.Small">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#8a000000</item>
+    </style>
+
+    <style name="AppTheme.TextView.Error">
+        <item name="android:textSize">19sp</item>
+        <item name="android:textColor">#BDBDBD</item>
+        <item name="android:shadowColor">#F5F5F5</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">1</item>
+    </style>
+
+</resources>
