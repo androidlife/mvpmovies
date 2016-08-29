@@ -15,10 +15,10 @@ import retrofit2.Response;
  */
 public class SearchMoviesModel implements SearchMoviesMVP.Model {
 
-    private SearchMoviesMVP.Presenter presenter;
+    private SearchMoviesMVP.Presenter.Model presenter;
     private Call<ArrayList<SearchedMovie>> networkCall;
 
-    public SearchMoviesModel(SearchMoviesMVP.Presenter presenter) {
+    public SearchMoviesModel(SearchMoviesMVP.Presenter.Model presenter) {
         this.presenter = presenter;
     }
 

@@ -62,7 +62,7 @@ public class SearchMoviesFragment extends BaseFragment implements SearchMoviesMV
     private static final int threshold = 3, pageLimit = 10;
     private int pageNumber = 0;
     private boolean isLoading = false;
-    private SearchMoviesPresenter presenter;
+    private SearchMoviesMVP.Presenter.View presenter;
 
     private void initView(Bundle params) {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());

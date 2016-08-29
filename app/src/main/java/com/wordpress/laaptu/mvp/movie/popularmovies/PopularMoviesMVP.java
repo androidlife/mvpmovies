@@ -26,15 +26,21 @@ public interface PopularMoviesMVP {
     }
 
     interface Presenter {
-        void initMovieLoad(int limit);
 
-        void fetchPopularMovies(int page, int limit);
+        interface View {
+            void initMovieLoad(int limit);
 
-        void onSuccess(ArrayList<Movie> movies, int page);
+            void fetchPopularMovies(int page, int limit);
 
-        void onFailure();
+            void onDestroy();
+        }
 
-        void onDestroy();
+        interface Model {
+            void onSuccess(ArrayList<Movie> movies, int page);
+
+            void onFailure();
+        }
+
 
     }
 }

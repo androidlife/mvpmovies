@@ -13,9 +13,9 @@ import retrofit2.Response;
  */
 public class PopularMoviesModel implements PopularMoviesMVP.Model {
 
-    private PopularMoviesMVP.Presenter presenter;
+    PopularMoviesMVP.Presenter.Model presenter;
 
-    public PopularMoviesModel(final PopularMoviesMVP.Presenter presenter) {
+    public PopularMoviesModel(final PopularMoviesMVP.Presenter.Model presenter) {
         this.presenter = presenter;
 
     }

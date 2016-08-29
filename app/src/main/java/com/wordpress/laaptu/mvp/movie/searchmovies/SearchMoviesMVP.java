@@ -31,15 +31,21 @@ public interface SearchMoviesMVP {
 
     interface Presenter {
 
-        void beginNewSearch(String searchText, int limit);
+        interface View {
+            void beginNewSearch(String searchText, int limit);
 
-        void loadMore(String searchText, int page, int limit);
+            void loadMore(String searchText, int page, int limit);
 
-        void onSuccess(ArrayList<SearchedMovie> movies, String searchText, int page);
+            void onDestroy();
+        }
 
-        void onFailure();
+        interface Model {
 
-        void onDestroy();
+            void onSuccess(ArrayList<SearchedMovie> movies, String searchText, int page);
+
+            void onFailure();
+        }
+
 
     }
 }

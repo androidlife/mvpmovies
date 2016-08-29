@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 /**
  */
-public class SearchMoviesPresenter implements SearchMoviesMVP.Presenter {
+public class SearchMoviesPresenter implements SearchMoviesMVP.Presenter.Model, SearchMoviesMVP.Presenter.View {
 
     private SearchMoviesMVP.View view;
     private SearchMoviesMVP.Model model;

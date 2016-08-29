@@ -35,7 +35,7 @@ public class MovieListFragment extends BaseFragment implements PopularMoviesMVP.
     private static final String PAGE_NUMBER = "pageNumber", MOVIE_LIST = "moviesList";
 
 
-    private PopularMoviesPresenter presenter;
+    private PopularMoviesMVP.Presenter.View presenter;
 
     @Override
     public int getLayoutId() {
